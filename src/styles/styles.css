@@ -1,1 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #758567;
+}
+
+.app__wrapper {
+  margin: 100px auto;
+  max-width: 320px;
+  background: #cdcdca;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
