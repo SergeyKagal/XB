@@ -1,4 +1,5 @@
 import { tags } from '..';
+import { drawTags } from './draw-tags';
 
 const addButton = document.querySelector('.input-area__button');
 const inputText = document.querySelector('#input-area__input');
@@ -12,6 +13,7 @@ export const addHandler = () => {
       });
 
       inputText.value = '';
+      drawTags(tags);
     }
   });
 };
