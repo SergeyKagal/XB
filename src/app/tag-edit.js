@@ -11,7 +11,7 @@ export const tagEditOpen = (id) => {
   state.isEditorOpen = true;
   const editor = document.createElement('div');
   editor.classList.add('editor');
-  editor.innerHTML = `<input type="text" class="tag-edit">
+  editor.innerHTML = `<input type="text" class="tag-edit" placeholder="type new tag's content">
   <div><button class="submit">submit</button><button class="cancel">cancel</button></div>
   `;
   document.body.appendChild(editor);

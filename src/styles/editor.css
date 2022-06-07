@@ -1,12 +1,36 @@
 .editor {
-  width: 280px;
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #999999;
+  height: 4.5rem;
 }
 
 .tag-edit {
+  display: inline-block;
   border: 1px solid #333333;
+  height: 1.5rem;
+}
+.tag-edit:placeholder-shown {
+  padding-left: 10px;
+}
+
+.editor button {
+  border: none;
+  color: #ffffff;
+  height: 1.5rem;
+  padding: 7px;
+  line-height: 0.7rem;
+  cursor: pointer;
+}
+.submit {
+  background-color: #3e38ef;
+  margin-right: 10px;
+}
+.cancel {
+  background-color: #cd0000;
 }
