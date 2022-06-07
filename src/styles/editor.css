@@ -4,4 +4,9 @@
   margin-right: auto;
   display: flex;
   justify-content: space-between;
+  background-color: #999999;
+}
+
+.tag-edit {
+  border: 1px solid #333333;
 }

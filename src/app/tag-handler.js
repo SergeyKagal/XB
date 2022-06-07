@@ -1,7 +1,7 @@
 import { state, tags } from '..';
 import { drawTags } from './draw-tags';
 import { saveTags } from './save-tags';
-import { tagEditOpen } from './tag-edit';
+import { tagEditClose, tagEditOpen } from './tag-edit';
 import { warning } from './warning';
 
 export const tagListenerOn = () => {
@@ -30,6 +30,9 @@ export const tagClickHandler = (e) => {
     tagListenerOff();
     tags.forEach((element, index) => {
       if (element.tagId === id) {
+        if (document.querySelector('.editor')) {
+          tagEditClose();
+        }
         tags.splice(index, 1);
       }
     });
