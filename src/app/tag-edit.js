@@ -12,7 +12,8 @@ export const tagEditOpen = (id) => {
   const editor = document.createElement('div');
   editor.classList.add('editor');
   editor.innerHTML = `<input type="text" class="tag-edit">
-  <button class="submit">submit</button><button class="cancel">cancel</button>`;
+  <div><button class="submit">submit</button><button class="cancel">cancel</button></div>
+  `;
   document.body.appendChild(editor);
 
   document.querySelector('.submit').addEventListener('click', () => {
