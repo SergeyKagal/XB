@@ -1,25 +1,33 @@
 import { state, tags } from '..';
 import { drawTags } from './draw-tags';
 import { saveTags } from './save-tags';
+import { tagEditOpen } from './tag-edit';
 import { warning } from './warning';
 
-export const deleteListenerOn = () => {
+export const tagListenerOn = () => {
   const list = document.querySelector('.tag__list');
-  list.addEventListener('click', deleteHandler);
+  list.addEventListener('click', tagClickHandler);
 };
-export const deleteListenerOff = () => {
+export const tagListenerOff = () => {
   const list = document.querySelector('.tag__list');
-  list.removeEventListener('clic', deleteHandler);
+  list.removeEventListener('clic', tagClickHandler);
 };
 
-export const deleteHandler = (e) => {
+export const tagClickHandler = (e) => {
+  const id = e.target.getAttribute('id');
+  if (
+    e.target.classList.contains('tag__list-edit-button') &&
+    !state.isReadOnly &&
+    !state.isEditorOpen
+  ) {
+    tagEditOpen(id);
+  }
+
   if (e.target.className === 'tag__list-delete-button' && state.isReadOnly) {
     warning();
   }
   if (e.target.className === 'tag__list-delete-button' && !state.isReadOnly) {
-    const id = e.target.getAttribute('id');
-
-    deleteListenerOff();
+    tagListenerOff();
     tags.forEach((element, index) => {
       if (element.tagId === id) {
         tags.splice(index, 1);

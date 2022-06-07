@@ -20,13 +20,21 @@
   justify-content: space-between;
   padding: 0 0.75rem;
 }
-.tag__list-delete-button {
-  color: #ff0000;
-  font-size: 32px;
+.tag__list-delete-button,
+.tag__list-edit-button {
   cursor: pointer;
   border: none;
   background-color: #fff;
 }
-.tag__list-delete-button:hover {
+.tag__list-delete-button {
+  color: #ff0000;
+  font-size: 32px;
+}
+.tag__list-edit-button {
+  color: #555555;
+  font-size: 20px;
+}
+.tag__list-delete-button:hover,
+.tag__list-edit-button:hover {
   color: #7b3535;
 }
