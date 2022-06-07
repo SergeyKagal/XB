@@ -1,4 +1,4 @@
-import { tags } from '..';
+import { state, tags } from '..';
 import { drawTags } from './draw-tags';
 import { saveTags } from './save-tags';
 
@@ -12,7 +12,7 @@ export const deleteListenerOff = () => {
 };
 
 export const deleteHandler = (e) => {
-  if (e.target.className === 'tag__list-delete-button') {
+  if (e.target.className === 'tag__list-delete-button' && !state.isReadOnly) {
     const id = e.target.getAttribute('id');
 
     deleteListenerOff();

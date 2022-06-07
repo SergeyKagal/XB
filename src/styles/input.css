@@ -35,3 +35,6 @@
 .input-area__button:hover {
   background-color: #304153;
 }
+.input-area__button:disabled {
+  background-color: #888888;
+}
