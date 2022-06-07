@@ -12,7 +12,7 @@ body {
 }
 
 .app__wrapper {
-  margin: 100px auto;
+  margin: 100px auto 40px auto;
   max-width: 320px;
   background: #cdcdca;
   display: flex;
