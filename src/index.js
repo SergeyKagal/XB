@@ -5,6 +5,7 @@ import { addHandler } from './app/add-tag-handler';
 import { saveTags } from './app/save-tags';
 import { loadTags } from './app/load-tags';
 import { checkBoxHandler } from './app/check-box-handler';
+import { loadState } from './app/load-state';
 
 export const tags = [];
 export const state = {
@@ -12,6 +13,7 @@ export const state = {
 };
 
 loadTags();
+loadState();
 addHandler();
 window.addEventListener('unload', saveTags);
 checkBoxHandler();
